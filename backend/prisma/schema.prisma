@@ -1,0 +1,59 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  username String   @unique
+  password String
+  games    Game[]
+}
+
+model Game {
+  id        Int      @id @default(autoincrement())
+  title     String
+  genre     Genre
+  platform  Platform
+  status    Status
+  rating    Float?
+  ownerId   Int
+  owner     User     @relation(fields: [ownerId], references: [id])
+  
+}
+
+enum Genre {
+  Action
+  Adventure
+  RPG
+  Strategy
+  Simulation
+  Sports
+  Puzzle
+}
+
+enum Platform {
+  PC
+  PS
+  Xbox
+  Switch
+  Mobile
+}
+
+enum Status {
+  playing
+  finished
+  plan_to_play
+  dropped
+  on_hold
+}
