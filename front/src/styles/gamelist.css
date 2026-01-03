@@ -1,0 +1,121 @@
+
+
+  .statusContainer{
+    display: inline-block;
+    margin-top: 5px;
+    margin-right: 10px; 
+    /*background-color: rgb(151, 179, 179);*/
+    
+  }
+
+
+  .statusContainer button:hover {
+    color: #777;
+    
+  }
+
+  .statusContainer button {
+    
+    
+    transition: all 0.3s;
+    text-align: center;
+    border: none;
+    border-bottom: 0.5pt solid #1d1e22;
+    color: rgb(0, 0, 0);
+    display: inline-flex;
+    padding: 5pt 10pt;
+    
+    background: #333;
+    box-shadow: 1px 1px 2px 1px #231f20;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 8pt;
+    background: #26292c;
+    margin-bottom: 0.5px;
+    border-radius: 7px 7px 0 0;
+    border-top: 1px solid #3b3d3f;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .statusContainer button{
+    width: 200px;
+    margin-right: 5px;
+  }
+
+  .gameContainer{
+  
+
+    display: inline-block;
+    margin-top: 30px;
+    
+
+  }
+
+  .statusContainer button.active {
+    background-color: #4d128cff;
+    color: #fff; 
+    }
+
+  
+  table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 82vw; 
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    
+    
+  }
+
+
+  td,th{
+
+    text-align: center;
+    border-bottom: 1px solid black;
+    /*border-top: 1px solid #ccc;*/
+    /*min-width: 70px;*/
+    height: 70px;
+    min-width: 70px;
+    
+  }
+
+  tr{
+    margin: 0;
+  }
+  
+  tbody tr:hover{
+    background-color: #e2dfdf;
+    cursor: pointer;
+  }
+  
+  .separator {
+    border-left: 2px solid black;
+    height: 70%; 
+    margin: 0 20px; 
+    min-height: 30px; 
+  
+  }
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.buttonContainer button{
+  width: 70px;
+  height: 20px;
+  border-radius: 8px;
+  margin-right: 20px;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+}
+.buttonContainer button:hover{
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+.clickable:hover{
+  cursor: pointer;
+}
+
