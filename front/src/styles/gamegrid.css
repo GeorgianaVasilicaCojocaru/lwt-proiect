@@ -1,0 +1,73 @@
+.games-wrapper {
+  padding: 24px;
+}
+
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 16px;
+}
+
+.game-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.game-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.game-card h3 {
+  margin: 0 0 8px;
+}
+
+.description {
+  flex: 1;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 0.85rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.pagination button {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #333;
+  color: white;
+}
+
+.pagination button:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+}

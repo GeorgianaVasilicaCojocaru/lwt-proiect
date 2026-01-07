@@ -45,3 +45,21 @@ export const GET_GAMES_BY_GENRE = gql`
     }
   }
 `
+export const PAGINATED_GAMES = gql`
+  query PaginatedGames($page: Int!, $limit: Int!) {
+    paginatedGames(page: $page, limit: $limit) {
+      items {
+        id
+        title
+        genre
+        platform
+        status
+        rating
+      }
+      page
+      limit
+      totalCount
+      hasNextPage
+    }
+  }
+`

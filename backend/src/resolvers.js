@@ -131,10 +131,10 @@ module.exports = {
       const user = await prisma.user.findUnique({
         where: { username: input.username },
       })
-      if (!user) throw new Error("User not found")
+      if (!user) throw new Error("Invalid credentials")
 
       const valid = await bcrypt.compare(input.password, user.password)
-      if (!valid) throw new Error("Incorrect password")
+      if (!valid) throw new Error("Invalid credentials")
       const token = jwt.sign({ id: user.id, username: user.username }, SECRET, { expiresIn: '1h' })
       return token
     },

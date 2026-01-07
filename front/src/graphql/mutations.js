@@ -6,6 +6,16 @@ export const LOGIN_USER = gql`
   }
 `
 
+export const REGISTER_USER = gql`
+  mutation RegisterUser($input: RegisterInput!) {
+    registerUser(input: $input){
+      id
+      username
+    }
+  }
+`
+
+
 export const ADD_GAME = gql`
   mutation AddGame($input: GameInput!) {
     addGame(input: $input) {

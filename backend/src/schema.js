@@ -68,6 +68,14 @@ module.exports = gql`
     rating: Float
   }
 
+  input GameUpdateInput {
+    title: String
+    genre: String
+    platform: String
+    rating: Float
+    status: String
+  }
+
   input LoginInput {
     username: String!
     password: String!
@@ -83,7 +91,7 @@ module.exports = gql`
     registerUser(input: RegisterInput!): User!
     login(input: LoginInput!): String!
     addGame(input: GameInput!): Game!
-    updateGame(id: ID!, input: GameInput!): Game!
+    updateGame(id: ID!, input: GameUpdateInput!): Game!
     deleteGame(id: ID!): Boolean!
   }
 `

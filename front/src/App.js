@@ -1,12 +1,11 @@
 import './App.css';
-import React, { useState } from 'react'
-import GamesList from './components/GamesList';
-import AddGameForm from './components/AddGameForm';
+import { useState } from 'react'
 import Header from './components/Header';
 import { Routes, Route } from "react-router-dom";
 import NavMenu from './components/Nav';
 import LoginForm from './components/LoginForm';
 import GamesPage from './components/GamePage';
+import GamesPaginated from './components/GamesPaginated';
 
 
 function App() {
@@ -31,7 +30,7 @@ function App() {
         <NavMenu onLogout={handleLogout}/>
         <Routes>
           <Route path="/" element={<GamesPage />} />
-          <Route path="/addGame" element={<AddGameForm />} />
+          <Route path="/paginate" element={<GamesPaginated />} />
         </Routes>
         
       </div>

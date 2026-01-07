@@ -18,6 +18,7 @@ export default function NavMenu({onLogout}) {
     >
       <div style={{display:"flex", gap:"20px"}}>
         <Link to="/">List</Link>
+        <Link to="/paginate">Paginated Games</Link>
       </div>
       <div>
          <button
